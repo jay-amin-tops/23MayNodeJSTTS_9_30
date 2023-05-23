@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        document.getElementById("btn").addEventListener("click",function () {
+            console.log("Called");
+        })
+        function btnclick() {
+            console.log("called"); // console.log(); delveloper
+        } 
+    </script>-->
+</head>
+
+<body>
+    <header>
+        header
+    </header>
+    <main>
+        <p>script never recommanded in head because its compiled and when we handle our operation via EventListener compiler required DOM init before EventListener</p>
+    </main>
+    <button onclick="btnclick()">Click</button>
+    <button id="btn">Click </button>
+    <footer>
+        Footer data
+        <script>
+            // console.log(document);
+            console.log(document.body);
+            document.body.style.backgroundColor="green"
+        </script>
+    </footer>
+</body>
+
+</html>

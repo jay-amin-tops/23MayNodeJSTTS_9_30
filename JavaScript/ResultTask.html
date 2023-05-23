@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label>Maths</label>
+    <input type="text" name="marks" id="marks">
+    <br>
+    <br>
+    <label>Science</label>
+    <input type="text" name="marks1" id="marks1">
+    <br>
+    <br>
+    <label>English</label>
+    <input type="text" name="marks1" id="marks2">
+    <br>
+    <br>
+    <label>Computer</label>
+    <input type="text" name="marks1" id="marks3">
+    <br>
+    <br>
+    <input type="button" name="btn" value="Get Result" id="btn">
+    <div class="result"></div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            // console.log("called");
+            var Marks = document.getElementById("marks").value
+            var Marks1 = document.getElementById("marks1").value
+            var Marks2 = document.getElementById("marks2").value
+            var Marks3 = document.getElementById("marks3").value
+
+            console.log("Marks", Marks);
+            let addition = parseInt(Marks) + parseInt(Marks1) + parseInt(Marks2) + parseInt(Marks3)
+            console.log("Total Marks ", addition);
+            let DispDiv = document.getElementsByClassName("result")
+            console.log(marks);
+            // if(marks >= 35){
+            let Average = addition / 4;
+            if (Marks >= 50 && Marks1 >= 50 && Marks2 >= 50 && Marks3 >= 50) {
+                console.log("called main if");
+                if (Average >= 50) {
+                    console.log("called nested if");
+                    DispDiv[0].innerHTML = "pass"
+                    if (Average >= 50 && Average < 60) {
+                        // DispDiv[0].innerHTML = "Pass class"
+                        DispDiv[0].innerHTML = "you secured with Pass Class and your average marks is :" + Average
+                    } else if (Average >= 60 && Average < 70) {
+                        DispDiv[0].innerHTML = "you secured with Second Class and your average marks is :" + Average
+                    } else if (Average >= 70 && Average < 80) {
+                        // DispDiv[0].innerHTML = "First class"
+                        DispDiv[0].innerHTML = "you secured with First Class and your average marks is :" + Average
+                    } else if (Average >= 80 && Average < 90) {
+                        DispDiv[0].innerHTML = "you secured with dist and your average marks is :" + Average
+                    } else {
+                        DispDiv[0].innerHTML = "you secured with dist+ and your average marks is :" + Average
+                    }
+                }
+                else {
+                    console.log("called nested else");
+                    DispDiv[0].innerHTML = "fail"
+
+                }
+            } else {
+                console.log("called main else");
+                DispDiv[0].innerHTML = "fail"
+            }
+
+
+        })
+    </script>
+</body>
+
+</html>
