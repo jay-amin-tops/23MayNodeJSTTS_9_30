@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    Cannot read properties of null (reading 'addEventListener')
+    <script>
+        // function getData() {
+        //     console.log("Called");
+        // }
+        document.getElementById("btn").addEventListener("click",function () {
+            console.log("called");
+        })
+    </script> -->
+    <script>
+        function chalse() {
+            console.log("msg dekhase");
+        }
+    </script>
+    <!-- <script src="externaljs.js"></script> -->
+    <script src="externaljs.js" defer></script>
+</head>
+
+<body>
+    <p>when u use addEventListener that time DOM elements must be declared before its use thats why we always recommanded put js in foot section after html </p>
+    <input type="text" name="username" id="username">
+    <input type="button" value="Addition" name="btn" id="btn">
+    <input type="button" value="checking" onclick="chalse()"  name="save" id="save">
+
+</body>
+
+</html>

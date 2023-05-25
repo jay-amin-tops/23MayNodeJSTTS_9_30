@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Event Handlers vs Event Listeners in JavaScript</h2>
+    <img src="Event-Listeners-in-Java.webp" alt="">
+    <img src="Events in Javascript.png" alt="">
+    <!-- Event Handlers START -->
+    <input type="text" name="val1" id="val1">
+    <button onclick="adddition(80,90)">Addition</button>
+    <button onclick="adddition(4150,90)">Addition</button>
+    <button id="btn">EventListern</button>
+    <!-- Event Handlers END -->
+    <script>
+         function adddition(a,b) {
+            console.log(a+b);
+            // return a+b
+        }
+
+
+        document.getElementById("btn").addEventListener("click",function () {
+            console.log("called");
+        })
+    </script>
+</body>
+</html>
