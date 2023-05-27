@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="post">
+        <input type="text" placeholder="Enter User Name" autocomplete="off" required name="username" id="username"> <br> <br>
+        <input type="password" placeholder="Enter Password" autocomplete="off" required name="password" id="password"> <br> <br>
+        <input type="email" placeholder="Enter Email" autocomplete="off" required name="email" id="email"> <br> <br>
+        <input type="tel" placeholder="Enter Mobile Number" autocomplete="off" name="mobile" id="mobile"> <br> <br>
+        <button type="submit" name="btn" id="btn">Save</button>
+    </form>
+    <script>
+        const allInputs = document.querySelectorAll('input');
+        allInputs.forEach((inputs)=>{
+            // console.log(data);
+            inputs.addEventListener("blur",function () {
+                let p = document.createElement("span");
+                const newtext = document.createTextNode("This field is required");
+                p.appendChild(newtext);
+                // console.log("called",this.value);
+                if (this.value == "") {
+                    console.log(this.nextSibling.nodeName);
+                    if (this.nextSibling.nodeName == "SPAN") {
+                        // console.log(this.nextSibling.remove());                    
+                        this.nextSibling.remove()
+                    }else{
+                        this.after(p)
+                    }
+                } else {
+                    this.nextSibling; 
+                    console.log(this.nextSibling);                    
+                    console.log(this.nextSibling.remove());                    
+                }
+            })
+        })
+        // document.getElementById("username").addEventListener("blur", myFunction);
+        // function myFunction() {/*from   w  w w. j a  va2  s.c  om*/
+        //     console.log("Input field lost focus.");
+        // }
+        // let p = document.createElement("p");
+        // const newtext = document.createTextNode("This field is required");
+        // p.appendChild(newtext);
+        // if (e.value == "") {
+        //     e.after(p)
+        // } else {
+        // }
+    </script>
+</body>
+
+</html>
