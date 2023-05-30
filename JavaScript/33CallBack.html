@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Calback</h3>
+    <p>A function is a block of code that performs a certain task when called.</p>
+    <p>In JavaScript, you can also pass a function as an argument to a function. This function that is passed as an
+        argument inside of another function is called a callback function.</p>
+
+        <h2>What is a Callback?</h2>
+        <p>In JavaScript, everything (strings, arrays, functions) is considered an object. Hence, the concept of callbacks lets us pass functions as arguments to another function which will be executed later within the outer function.</p>
+        <p>Next, let’s discuss the importance of callbacks in JavaScript.</p>
+        <p>Assume we have a function called 'compute'. It takes in 3 parameters namely a string and two numbers. The string ‘action’ is compared through a series of if conditions and the desired operation is computed and returned as shown below.</p>
+    <script>
+        // function
+        // function greet(name, callback) {
+        //     console.log('Hi' + ' ' + name);
+        //     callback();
+        // }
+        // // callback function
+        // function callMe() {
+        //     console.log('I am callback function');
+        // }
+
+        // // passing function as an argument
+        // greet('Peter', callMe);
+
+        //  program that shows the delay in execution
+
+        // function greet() {
+        //     console.log('Hello world');
+        // }
+
+        // function sayName(name) {
+        //     console.log('Hello' + ' ' + name);
+        // }
+
+        // // calling the function
+        // setTimeout(greet, 2000);
+        // sayName('John');
+
+        // Callback Function Example
+        function greet(name, myFunction) {
+            console.log('Hello world');
+            // callback function
+            // executed only after the greet() is executed
+            myFunction(name);
+        }
+
+        // callback function
+        function sayName(name) {
+            console.log('Hello' + ' ' + name);
+        }
+
+        // calling the function after 2 seconds
+        setTimeout(greet, 2000, 'John', sayName);
+    </script>
+</body>
+
+</html>

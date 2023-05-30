@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cust-class{
+            background: rgb(8, 99, 90);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="my-para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea quibusdam, beatae rerum accusantium tempore voluptatibus corporis asperiores ex perspiciatis, necessitatibus fugit deleniti distinctio autem neque, molestiae mollitia eveniet! Accusamus, optio.</p>
+    <button id="btn">Click</button>
+    <script>
+        document.getElementById("btn").addEventListener("click",function () {
+            console.log("called");
+            console.log(document.getElementById("my-para").classList);
+            document.getElementById("my-para").classList.add("cust-class")
+        })
+    </script>
+</body>
+</html>
