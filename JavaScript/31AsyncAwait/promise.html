@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+
+
+
+    <script>
+
+
+
+
+        function f1() {
+            console.log("f1 data");
+        }
+        function f2() {
+            console.log("f2 data");
+        }
+        function generateRandom(min, max) {
+            return new Promise(resolve => {
+                // using a timeout to make it wait for it by 1000ms
+                setTimeout(() => {
+                    resolve(Math.ceil(Math.random() * (max - min) + min)); // resolving promise
+
+                    // resolve(Math.random()); // resolving promise
+                }, 2000);
+            });
+            // return Math.ceil(Math.random() * (max - min) + min)
+        }
+
+        // self-executing function
+        (async () => {
+            f1()
+            const first = await generateRandom(1, 500000);
+            console.log(first);
+            f2()
+        })();
+        // ( () => {
+        //     f1()
+        //     const first = generateRandom(1, 500000);
+        //     console.log(first);
+        //     f2()
+        // })();
+        // ( () => {
+        //     const first = generateRandom(1, 500000);
+        //     console.log(first);
+        // })();
+    </script>
+</body>
+
+</html>

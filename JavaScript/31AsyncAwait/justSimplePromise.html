@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                if (8> 6) {
+                    resolve("foo");
+                }else{
+                    reject("reject");
+                }
+                console.log("called inside timeout");
+            }, 3000);
+        });
+        // console.log(myPromise);
+        // console.log(myPromise.then());
+        // myPromise.then((value) => console.log(`${value} and bar`));
+        anything = myPromise.then((value) => console.log(`${value} and bar`)).catch((value) => console.log(`${value} and bar`))
+        // console.log(anything);
+        // console.log(anything.PromiseState);
+        // console.log(anything[0]['PromiseState']);
+
+        // const promiseA = new Promise((resolve, reject) => {
+        //     resolve(777);
+        // });
+        // // At this point, "promiseA" is already settled.
+        // promiseA.then((val) => console.log("asynchronous logging has val:", val));
+        console.log("immediate logging");
+    </script>
+</body>
+
+</html>

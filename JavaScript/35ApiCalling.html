@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="dispData"></ul>
+    <script>
+        // fetch("https://jayramin.000webhostapp.com/allusers").then((returnData)=>{ console.log(returnData); }).then()
+        // fetch("https://jayramin.000webhostapp.com/allusers").then((returnData)=>{ console.log(returnData.json()); }).then((result)=>{ console.log(result); })
+        // fetch("https://jayramin.000webhostapp.com/allusers").then((returnData)=>{ return  returnData.json(); }).then((result)=>{ console.log(result); })
+        fetch("https://jayramin.000webhostapp.com/allusers").then((returnData)=>returnData.json()).then((result)=>{ console.log(result); 
+            ListData = result.Data.map((value)=>{
+                console.log(value.username)
+                return "<li>"+value.username+"</li>"
+                // return `<li>${value.username}</li>`
+            })
+            document.getElementById("dispData").innerHTML = ListData 
+        })
+    </script>
+</body>
+</html>

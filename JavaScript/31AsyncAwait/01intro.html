@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h2>synchronous</h2>
+    <p>existing or occurring at the same time.</p>
+    <p>making or denoting an orbit around the earth or another celestial body in which one revolution is completed in
+        the period taken for the body to rotate about its axis.z</p>
+
+    <h2>asynchronous</h2>
+    <p>Not occurring at the same time.</p>
+    <p>executing line by line.</p>
+
+
+    <h3>Difference</h3>
+    <p>Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can
+        run simultaneously. Synchronous is a blocking architecture, so the execution of each operation is dependent on
+        the completion of the one before it.</p>
+    <table>
+        <thead>
+            <tr>
+                <th style="text-align: center;">Sr. no.</th>
+                <th style="text-align: center;">Synchronous JavaScript</th>
+                <th style="text-align: center;">Asynchronous JavaScript</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="text-align: center;">1</td>
+                <td style="text-align: center;">Instruction in synchronous code executes in a given sequence.</td>
+                <td style="text-align: center;">Instructions in asynchronous code can execute in parallel.</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">2</td>
+                <td style="text-align: center;">Each operation waits for the previous operation to complete its
+                    execution.</td>
+                <td style="text-align: center;">Next operation can occur while the previous operation is still getting
+                    processed.</td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">3</td>
+                <td style="text-align: center;">Most of the time JavaScript is used as Synchronous code.</td>
+                <td style="text-align: center;">Asynchronous JavaScript is preferred in situations in which execution
+                    gets blocked indefinitely.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <pre>
+    function f1() {
+        console.log('f1');
+    }
+
+    function f2() {
+        console.log('f2');
+    }
+
+    function main() {
+        console.log('main');
+
+        setTimeout(f1, 0);
+
+        f2();
+    }
+
+    main();
+    // The code executes a setTimeout function with a callback function f1(). Note that we have given zero delays to it. This means that we expect the function f1() to execute immediately. Right after setTimeout, we execute another function, f2().
+
+    // But, you may think that f1 should print before f2 as we do not delay f1 to execute. But no, that's not the case. Remember the event loop mechanism we discussed above? Now, let's see it in a step-by-step flow for the above code.
+
+</pre>
+
+    <ol>
+        <li>The <code>main()</code> function gets inside the call stack.</li>
+        <li>It has a console log to print the word main. The <code>console.log('main')</code> executes and goes out of
+            the stack.</li>
+        <li>The setTimeout browser API takes place.</li>
+        <li>The callback function puts it into the callback queue.</li>
+        <li>In the stack, execution occurs as usual, so <code>f2()</code> gets into the stack. The console log of
+            <code>f2()</code> executes. Both go out of the stack.
+        </li>
+        <li>The <code>main()</code> also pops out of the stack.</li>
+        <li>The event loop recognizes that the call stack is empty, and there is a callback function in the queue.</li>
+        <li>The callback function <code>f1()</code> then goes into the stack. Execution starts. The console log
+            executes, and <code>f1()</code> also comes out of the stack.</li>
+        <li>At this point, nothing else is in the stack and queue to execute further.</li>
+    </ol>
+    <script>
+        // function printMe() {
+        //     console.log('print me');
+        // }
+        // setTimeout(printMe, 2000);
+        // console.log('First');
+
+        // // Set timeout for 2 seconds
+        // setTimeout(() => console.log('Second'), 2000);
+
+        // console.log('Third');
+
+        // console.log('First');
+
+        // // Set timeout for 2 seconds
+        // setTimeout( async () => {await console.log('Second')}, 2000);
+
+        // console.log('Third');
+
+        // function f1() {
+        //     console.log('f1');
+        // }
+
+        // function f2() {
+        //     console.log('f2');
+        // }
+
+        // function main() {
+        //     console.log('main');
+
+        //     setTimeout(f1, 0);
+
+        //     f2();
+        // }
+
+        // main();
+        // The code executes a setTimeout function with a callback function f1(). Note that we have given zero delays to it. This means that we expect the function f1() to execute immediately. Right after setTimeout, we execute another function, f2().
+
+        // But, you may think that f1 should print before f2 as we do not delay f1 to execute. But no, that's not the case. Remember the event loop mechanism we discussed above? Now, let's see it in a step-by-step flow for the above code.
+
+
+
+        // function f1() {
+        //     console.log('f1');
+        // }
+
+        // function f2() {
+        //     console.log('f2');
+        // }
+
+        // function main() {
+        //     console.log('main');
+        //     // f1()
+        //     setTimeout(f1, 0);
+
+        //     new Promise((resolve, reject) =>
+        //         resolve('I am a promise')
+        //     ).then(resolve => console.log(resolve))
+
+        //     f2();
+        // }
+
+        // main();
+
+
+        function f1() {
+            console.log('f1');
+        }
+
+        function f2() {
+            console.log('f2');
+        }
+
+        function f3() {
+            console.log('f3');
+        }
+
+        function main() {
+            console.log('main');
+
+            setTimeout(f1, 50);
+            setTimeout(f3, 30);
+
+            test = async ()=>{
+                abc = await  new Promise((resolve, reject) =>
+                    resolve('I am a Promise, right after f1 and f3! Really?')
+                ).then(resolve => console.log(resolve));
+                console.log("test",abc);
+            }
+            console.log("test calling",test());
+
+
+            new Promise((resolve, reject) =>
+                resolve('I am a Promise after Promise!')
+            ).then(resolve => console.log(resolve));
+
+            f2();
+        }
+
+        main();
+    </script>
+</body>
+
+</html>

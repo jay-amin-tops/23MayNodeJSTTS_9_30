@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>How the JavaScript Callback Queue Works (aka Task Queue)</h2>
+    <ul>
+        <li>When does the JavaScript engine put it in the queue?</li>
+        <li>When does the JavaScript engine take it out of the queue?</li>
+        <li>Where does it go when it comes out of the queue?</li>
+        <li>Most importantly, how do all these things relate to the asynchronous part of JavaScript?</li>
+    </ul>
+    <ul>
+        <li>When a Browser API occurs, park the callback functions in a queue.</li>
+        <li>Keep executing code as usual in the stack.</li>
+        <li>The event loop checks if there is a callback function in the queue.</li>
+        <li>If so, pull the callback function from the queue to the stack and execute.</li>
+        <li>Continue the loop.</li>
+    </ul>
+    <script>
+
+    </script>
+
+</body>
+
+</html>
