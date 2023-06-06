@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>OOPS</h2>
+    <p>Object Oriented Programming structure/system</p>
+    <p>based on 4 pillars</p>
+    <ol>
+        <li>Encapsulation => wrapping the data into single unit(its done through class, class is an example of Encapsulation)</li>
+        <li>Inheritance (access parent data in child)</li>
+        <li>Polimorphisum (many form same things overloading/overrriding)</li>
+        <li>Abstraction (hide something method will not be contain body/defination at declaration )</li>
+    </ol>
+    <script>
+        // function addition() {
+        //     console.log("Called");
+        // }
+        // addition();
+        // class MathOp{
+        //     function addition(params) { //Uncaught SyntaxError: Unexpected identifier 'addition'
+        //      class is a collection of datamember and member functions only thats why we dnt needs to define function with function keyword
+        //         console.log("Called");
+        //     }
+        // }
+        class MathOp{
+            kaipan = "something"
+            addition(params) { //Uncaught SyntaxError: Unexpected identifier 'addition'
+                console.log("Called");
+                console.log("Called",this.kaipan);
+            }
+        }
+        // addition()
+        // we can't access the properties of class wihtout creating an object 
+        // we can create a object of class with the help of new keyword
+        MathOpObject =  new MathOp
+        MathOpObject.addition();
+    </script>
+</body>
+</html>

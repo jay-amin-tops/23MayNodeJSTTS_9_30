@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class MathOp {
+            kaipan = "something"
+            addition(a, b) { //Uncaught SyntaxError: Unexpected identifier 'addition'
+                return a + b;
+            }
+        }
+        class AdvanceMathOp extends MathOp{
+            average(x,e) { //Uncaught SyntaxError: Unexpected identifier 'addition'
+                // let sum = x+e
+                let sum = this.addition(x,e)
+                // averageData = sum/2;
+                return sum/2;
+
+            }
+        }
+        let AdvanceMathOpObj = new AdvanceMathOp;
+        Res = AdvanceMathOpObj.average(50,90)
+        console.log(Res);
+    </script>
+</body>
+
+</html>

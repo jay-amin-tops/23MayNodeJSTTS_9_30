@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table class="alt">
+        <tbody>
+            <tr>
+                <th>Static</th>
+                <th>Const</th>
+            </tr>
+            <tr>
+                <td>The static keyword is used for defining static properties and methods in a javascript class program.
+                </td>
+                <td>The const keyword is used for defining constant value for a variable.</td>
+            </tr>
+            <tr>
+                <td>The static keyword can be accessed on the class definition only. In order to access the static
+                    keyword for non-static methods, one needs to invoke them using the class name. However, for calling
+                    a static method within another static method, we can make use of this keyword.</td>
+                <td>A const value can be accessed globally or locally, but a global constant can never be window object
+                    properties. </td>
+            </tr>
+            <tr>
+                <td>The static methods are the utility functions that are used for creating or cloning the objects.</td>
+                <td>The const variable is used for declaring a constant or fixed value whose value cannot be changed.
+                </td>
+            </tr>
+            <tr>
+                <td>JavaScript static is labeled by a keyword known as the 'static' keyword.</td>
+                <td>JavaScript const is labeled by a keyword known as the 'const' keyword, where we declare a const
+                    variable and initialize it with a constant value.</td>
+            </tr>
+            <tr>
+                <td>JavaScript static can be used with classes and methods also.</td>
+                <td>JavaScript const can be used with objects and arrays also.</td>
+            </tr>
+            <tr>
+                <td>The value for a static variable can be reassigned.</td>
+                <td>The value for a const variable cannot be reassigned. However, we can re-declare the const variable
+                    in different block scope as it is allowed.</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // class A{
+        //     SomethingA(){
+        //         console.log("Something");
+        //     }
+        // }
+        // class B extends A{
+        //     SomethingB(){
+        //         console.log("Something");
+        //     }
+        // }
+        // class C extends B{
+        //     SomethingC(){
+        //         console.log("Something");
+        //     }
+        // }
+        // class D extends C{
+        //     SomethingD(){
+        //         this.SomethingA()
+        //         console.log("Something");
+        //     }
+        // }
+        class A {
+            SomethingA() {
+                console.log("Something");
+            }
+        }
+        class B extends A {
+            SomethingB() {
+                console.log("Something");
+            }
+        }
+        class C extends B {
+            SomethingC() {
+                console.log("Something");
+            }
+        }
+        // class D extends C,A{
+        // class D extends C extends A{
+        class D extends C {
+            SomethingD() {
+                // this.SomethingA() //this.SomethingA is not a
+                console.log("Something");
+            }
+        }
+        let data = new D;
+        data.SomethingD();
+
+        class Chat {
+            static sendMessage() {
+                const uname ="test"
+                let uname ="test"
+                var uname ="test"
+                console.log("called Static method");
+                return "You got me!";
+            }
+
+        }
+        Chat.sendMessage()
+    </script>
+</body>
+
+</html>
