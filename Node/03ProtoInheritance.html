@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const parent = {
+            value: 2,
+            method() {
+                return this.value + 1;
+            },
+        };
+
+        console.log(parent.method()); // 3
+        // When calling parent.method in this case, 'this' refers to parent
+
+        // child is an object that inherits from parent
+        const child = {
+            __proto__: parent,
+        };
+        console.log(child.method()); // 3
+    </script>
+
+</body>
+
+</html>

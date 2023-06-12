@@ -200,13 +200,44 @@ var avg = (a, b) => {
 //Calc.display();
 
 
-// var myDate = new Date();
-// console.log(myDate);
-// console.log(myDate.getDate())
-// console.log(myDate.getDay())
-// console.log(myDate.getFullYear())
+var myDate = new Date();
+console.log(myDate);
+console.log(myDate.getDate())
+console.log(myDate.getDay())
+console.log(myDate.getFullYear())
 // console.log(myDate.getMonth())
 // console.log(myDate.getTime())
 // console.log(myDate.getHours())
 // console.log(myDate.getMinutes())
 
+var person = {
+    fullname: function (country, state) {
+        return this.fname + " " + this.lname + " " + country + " " + state
+    }
+}
+
+
+var p1 = {
+    fname: "Tops",
+    lname: "Technologies"
+}
+
+
+console.log(person.fullname.call(p1, "India", "Gujarat"))
+console.log(person.fullname.apply(p1, ["India", "MH"]));
+
+const o = {
+    a: 1,
+    b: 2,
+    // __proto__ sets the [[Prototype]]. It's specified here
+    // as another object literal.
+    __proto__: {
+      b: 3,
+      c: 4,
+      __proto__: {
+        d: 5,
+      },
+    },
+  };
+  
+  console.log(o.d); // 5
