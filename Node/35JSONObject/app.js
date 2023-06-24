@@ -26,6 +26,9 @@ app.get("/accessjsondata", (req, resp) => {
     // JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa). You'll come across it quite often, so in this article, we give you all you need to work with JSON using JavaScript, including parsing JSON so you can access data within it, and creating JSON.
     console.log(users);
 })
+app.get("/kaipan", (req, resp) => {
+    resp.sendFile(path.join(__dirname, "pages/anything.html"))
+})
 app.get("/pushjson", (req, resp) => {
     let userData = {
         name:"testing",
