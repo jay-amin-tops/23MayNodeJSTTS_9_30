@@ -1,0 +1,13 @@
+<script>
+    const inputs = document.querySelectorAll("input");
+    inputs.forEach(function (input) {
+        input.addEventListener("focus", function () {
+            const parentElement = input.parentElement.parentElement;
+            parentElement.classList.add("box-animation");
+        });
+        input.addEventListener("blur", function () {
+            const parentElement = input.parentElement.parentElement;
+            parentElement.classList.remove("box-animation");
+        });
+    });
+</script>

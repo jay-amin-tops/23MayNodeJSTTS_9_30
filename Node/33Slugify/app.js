@@ -17,6 +17,9 @@ const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
 // console.log("JSON file read",data[0].productName);
 const dataObj = JSON.parse(data);
 console.log("JSON file read", dataObj[0].productName);
+var myCss = {
+    style : fs.readFileSync('./style.css','utf8')
+};
 
 const server = http.createServer((req, res) => {
     const { query, pathname } = url.parse(req.url, true);

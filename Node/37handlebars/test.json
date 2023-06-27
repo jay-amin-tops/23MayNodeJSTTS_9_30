@@ -1,0 +1,11 @@
+{
+  "name": "handlebar",
+  "version": "1.0.0",
+  "description": "this is the example of handlebars",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Jay Amin",
+  "license": "ISC"
+}
