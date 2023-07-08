@@ -2,14 +2,14 @@ body{
   font-family: 'Poppins', sans-serif;
   display: grid;
   /* height: 100%; */
-  width: 100%;
+  /* width: 100%; */
   margin: 80px;
   overflow: hidden;
   place-items: center;
-  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  background: -webkit-linear-gradient(left, #0b2a3e, #42aafa);
 }
 ::selection{
-  background: #fa4299;
+  background: #42c0fa;
   color: #fff;
 }
 .wrapper{
@@ -22,7 +22,7 @@ body{
 }
 .wrapper .title-text{
   display: flex;
-  width: 200%;
+  /* width: 200%; */
 }
 .wrapper .title{
   width: 50%;

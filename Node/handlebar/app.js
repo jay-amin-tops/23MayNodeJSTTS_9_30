@@ -8,9 +8,16 @@ port = process.env.PORT
 app.set('view engine','hbs');
 app.set('views',path.join(__dirname + '/pages/views'))
 app.use(express.static(path.join(__dirname + '/public')));
-
+const data={
+    name:"data"
+}
 app.get('/login', (req, res) => {
-    res.render('index')
+    res.render('index',{d:data})
+    // res.send('<p>some html</p>');
+    // res.end()
+})
+app.get('/', (req, res) => {
+    res.render('home',{d:data})
     // res.send('<p>some html</p>');
     // res.end()
 })
