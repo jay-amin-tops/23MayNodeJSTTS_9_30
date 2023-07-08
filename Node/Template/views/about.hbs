@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Restoran - Bootstrap Restaurant Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    {{> link}}   
+</head>
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        {{> spinner}}
+        <!-- Spinner End -->
+
+        <!-- Navbar & Hero Start -->
+        {{> common name="About"}}
+        <!-- Navbar & Hero End -->
+
+        <!-- About Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                {{data.name}}
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Team Start -->
+     
+        <!-- Team End -->
+
+        <!-- Footer Start -->
+        {{> footer}}
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    {{> script}}
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

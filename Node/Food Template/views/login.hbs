@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restoran - Bootstrap Restaurant Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <link rel="stylesheet" href="css/style_login.css">
+  {{> link}}
+
+</head>
+
+<body>
+  <div class="container-xxl bg-white p-0">
+    <!-- Spinner Start -->
+    {{> spinner}}
+    <!-- Spinner End -->
+
+    <!-- Navbar & Hero Start -->
+    {{> commonnavbar name="Login"}}
+    <!-- Navbar & Hero End -->
+
+
+    <div class="wrapper">
+      {{!-- <div class="title-text">
+        <div class="title login">
+          Login Form
+        </div>
+        <div class="title signup">
+          Signup Form
+        </div>
+      </div> --}}
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked />
+          <input type="radio" name="slide" id="signup" />
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="#" class="login">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required />
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Login" />
+            </div>
+            <div class="signup-link">
+              Not a member?
+              <a href="#">Signup now</a>
+            </div>
+          </form>
+          <form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required />
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Password" required />
+            </div>
+            <div class="field">
+              <input type="password" placeholder="Confirm password" required />
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" value="Signup" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer Start -->
+    {{> footer}}
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+  </div>
+
+  <!-- JavaScript Libraries -->
+  {{> script}}
+
+  <!-- Template Javascript -->
+  <script src="js/main.js"></script>
+  <script src="js/style.js"></script>
+
+</body>
+
+</html>
