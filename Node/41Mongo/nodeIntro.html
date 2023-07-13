@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="https://www.mongodbtutorial.org/getting-started/what-is-mongodb/">Reference</a>
+    <article id="post-101" class="post-101 page type-page status-publish hentry">
+        <header class="entry-header">
+            <h1 class="entry-title">What is MongoDB</h1>
+        </header>
+        <div class="entry-content">
+            <h2 class="wp-block-heading">Introduction to MongoDB</h2>
+            <p>MongoDB is an open-source, cross-platform, distributed document database. MongoDB is developed by <a
+                    href="https://www.mongodb.com/company" target="_blank" rel="noreferrer noopener">MongoDB Inc</a>.
+                and categorized as a NoSQL database.</p>
+            <h3 class="wp-block-heading">1) Easy to use</h3>
+            <p>MongoDB is a document-oriented database. It uses the concept of the document to store data, which is more
+                flexible than the row concept in the relational database management system (RDBMS).</p>
+            <p>A document allows you to represent complex hierarchical relationships with a single record.</p>
+            <p>MongoDB doesn’t require predefined schemas that allow you to add to or remove fields from documents more
+                quickly.</p>
+            <h3 class="wp-block-heading">2) Designed to scale out</h3>
+            <p>When the database grows, you’ll have a challenge of how to scale it. There are two common ways:</p>
+            <ul>
+                <li>Scaling up – upgrade the current server to a bigger one with more resources (CPU, RAM, etc).
+                    However, getting a bigger server means increasing more costs.</li>
+                <li>Scaling out – purchase additional servers and add them to the cluster. This is cheaper and more
+                    scalable than scaling up. The downside is that it takes more effort to manage multiple servers than
+                    a big one.</li>
+            </ul>
+            <p>MongoDB was designed to scale out.</p>
+            <p>MongoDB allows you to split data across many servers. It also automatically manages the load balancing
+                across the cluster, redistributing data, and routing updates to the correct servers.</p>
+            <p>The following picture illustrates how MongoDB scale-out using sharding across multiple servers:</p>
+            <figure class="wp-block-image size-large"><img decoding="async" width="682" height="346"
+                    src="https://www.mongodbtutorial.org/wp-content/uploads/2020/08/what-is-mongodb-scale-out.png"
+                    alt="" class="wp-image-111"
+                    srcset="https://www.mongodbtutorial.org/wp-content/uploads/2020/08/what-is-mongodb-scale-out.png 682w, https://www.mongodbtutorial.org/wp-content/uploads/2020/08/what-is-mongodb-scale-out-300x152.png 300w"
+                    sizes="(max-width: 682px) 100vw, 682px"></figure>
+            <h3 class="wp-block-heading">3) Rich features</h3>
+            <p>Like any database system, MongoDB allows you to insert, update, and delete, and select data. In addition,
+                it supports other features including:</p>
+            <ul>
+                <li>Indexing</li>
+                <li>Aggregation</li>
+                <li>Specify collection and index types</li>
+                <li>File Storage</li>
+            </ul>
+            <p>Note that you will learn more about these features in detail in the next tutorial.</p>
+            <h3 class="wp-block-heading">4) High performance</h3>
+            <p>MongoDB was designed to maintain the high performance from both architecture and feature perspectives.
+            </p>
+            <p>The philosophy of MongoDB is to create a full-featured database that is scalable, flexible, and fast.</p>
+            <h2 class="wp-block-heading">MongoDB editions</h2>
+            <p>MongoDB has three editions: community server, enterprise server, and atlas.</p>
+            <h3 class="wp-block-heading">1) MongoDB Community Server</h3>
+            <p>The MongoDB Community Edition is free and available on Windows, Linux, and macOS.</p>
+            <p>MongoDB Community Edition uses the <a href="https://www.mongodb.com/licensing/server-side-public-license"
+                    target="_blank" rel="noreferrer noopener">Server Side Public License</a> (SSPL). It means that if
+                you offer MongoDB as a service to the public, you need to open the source code of the software that
+                makes the service works e.g., administration and monitoring tools. Otherwise, you need to pay for the
+                enterprise subscription.</p>
+            <p>If you use the MongoDB Community Edition as a component of your application, not the final product, you
+                are free to use it.</p>
+            <h3 class="wp-block-heading">2) MongoDB Enterprise Server</h3>
+            <p>MongoDB Enterprise Server is a commercial edition of MongoDB as a part of the MongoDB Enterprise Advanced
+                subscription.</p>
+            <h3 class="wp-block-heading">3) MongoDB Atlas</h3>
+            <p>MongoDB Atlas is a global cloud database service. It is a database as a service that allows you to focus
+                on building apps rather than spending time managing the databases.</p>
+            <p>MongoDB Atlas is available on common cloud platforms such as AWS, Azure, and GCP. MongoDB Atlas has a
+                free tier for your experiments.</p>
+            <div class="helpful-block-content" data-title="">
+                <header>
+                    <div class="wth-question">Was this tutorial helpful ?</div>
+                    <div class="wth-thumbs"> <button data-post="101"
+                            data-post-url="https://www.mongodbtutorial.org/getting-started/what-is-mongodb/"
+                            data-post-title="What is MongoDB" data-response="1" class="wth-btn-rounded wth-yes-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                class="feather feather-thumbs-up block w-full h-full">
+                                <path
+                                    d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3">
+                                </path>
+                            </svg> <span class="sr-only"> Yes </span> </button> <button data-response="0"
+                            data-post="101"
+                            data-post-url="https://www.mongodbtutorial.org/getting-started/what-is-mongodb/"
+                            data-post-title="What is MongoDB" class="wth-btn-rounded wth-no-btn"> <svg
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17">
+                                </path>
+                            </svg> <span class="sr-only"> No </span> </button></div>
+                </header>
+                <div class="wth-form hidden">
+                    <div class="wth-form-wrapper">
+                        <div class="wth-title"></div><textarea class="wth-message"></textarea><input type="button"
+                            name="wth-submit" class="wth-btn wth-btn-submit" id="wth-submit"> <input type="button"
+                            class="wth-btn wth-btn-cancel" value="Cancel">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+
+    <h2>DB Shell</h2>
+    <p>show dbs</p>
+    <p>show dbs</p>
+
+    <ul>
+        <li>Math.max(10,20,30);</li>
+        <li>show dbs</li>
+        <li>use bookdb</li>
+        <li>
+            <pre>
+            db.books.insertOne({
+                title: "MongoDB Tutorial",
+                published_year: 2020
+             })
+        </pre>Will automatically create a database and collection and insert data into it
+        </li>
+    </ul>
+    <a href="https://www.mongodbtutorial.org/mongodb-crud/mongodb-find/">Reference</a>
+    <pre>
+        db.books.insertMany([
+	{ "_id" : 1, "title" : "Unlocking Android", "isbn" : "1933988673", "categories" : [ "Open Source", "Mobile" ] },
+	{ "_id" : 2, "title" : "Android in Action, Second Edition", "isbn" : "1935182722", "categories" : [ "Java" ] },
+	{ "_id" : 3, "title" : "Specification by Example", "isbn" : "1617290084", "categories" : [ "Software Engineering" ] },
+	{ "_id" : 4, "title" : "Flex 3 in Action", "isbn" : "1933988746", "categories" : [ "Internet" ] },
+	{ "_id" : 5, "title" : "Flex 4 in Action", "isbn" : "1935182420", "categories" : [ "Internet" ] },
+	{ "_id" : 6, "title" : "Collective Intelligence in Action", "isbn" : "1933988312", "categories" : [ "Internet" ] },
+	{ "_id" : 7, "title" : "Zend Framework in Action", "isbn" : "1933988320", "categories" : [ "Web Development" ] },
+	{ "_id" : 8, "title" : "Flex on Java", "isbn" : "1933988797", "categories" : [ "Internet" ] },
+	{ "_id" : 9, "title" : "Griffon in Action", "isbn" : "1935182234", "categories" : [ "Java" ] },
+	{ "_id" : 10, "title" : "OSGi in Depth", "isbn" : "193518217X", "categories" : [ "Java" ] },
+	{ "_id" : 11, "title" : "Flexible Rails", "isbn" : "1933988509", "categories" : [ "Web Development" ] },
+	{ "_id" : 13, "title" : "Hello! Flex 4", "isbn" : "1933988762", "categories" : [ "Internet" ] },
+	{ "_id" : 14, "title" : "Coffeehouse", "isbn" : "1884777384", "categories" : [ "Miscellaneous" ] },
+	{ "_id" : 15, "title" : "Team Foundation Server 2008 in Action", "isbn" : "1933988592", "categories" : [ "Microsoft .NET" ] },
+	{ "_id" : 16, "title" : "Brownfield Application Development in .NET", "isbn" : "1933988711", "categories" : [ "Microsoft" ] },
+	{ "_id" : 17, "title" : "MongoDB in Action", "isbn" : "1935182870", "categories" : [ "Next Generation Databases" ] },
+	{ "_id" : 18, "title" : "Distributed Application Development with PowerBuilder 6.0", "isbn" : "1884777686", "categories" : [ "PowerBuilder" ] },
+	{ "_id" : 19, "title" : "Jaguar Development with PowerBuilder 7", "isbn" : "1884777864", "categories" : [ "PowerBuilder", "Client-Server" ] },
+	{ "_id" : 20, "title" : "Taming Jaguar", "isbn" : "1884777686", "categories" : [ "PowerBuilder" ] },
+	{ "_id" : 21, "title" : "3D User Interfaces with Java 3D", "isbn" : "1884777902", "categories" : [ "Java", "Computer Graphics" ] },
+	{ "_id" : 22, "title" : "Hibernate in Action", "isbn" : "193239415X", "categories" : [ "Java" ] },
+	{ "_id" : 23, "title" : "Hibernate in Action (Chinese Edition)", "categories" : [ "Java" ] },
+	{ "_id" : 24, "title" : "Java Persistence with Hibernate", "isbn" : "1932394885", "categories" : [ "Java" ] },
+	{ "_id" : 25, "title" : "JSTL in Action", "isbn" : "1930110529", "categories" : [ "Internet" ] },
+	{ "_id" : 26, "title" : "iBATIS in Action", "isbn" : "1932394826", "categories" : [ "Web Development" ] },
+	{ "_id" : 27, "title" : "Designing Hard Software", "isbn" : "133046192", "categories" : [ "Object-Oriented Programming", "S" ] },
+	{ "_id" : 28, "title" : "Hibernate Search in Action", "isbn" : "1933988649", "categories" : [ "Java" ] },
+	{ "_id" : 29, "title" : "jQuery in Action", "isbn" : "1933988355", "categories" : [ "Web Development" ] },
+	{ "_id" : 30, "title" : "jQuery in Action, Second Edition", "isbn" : "1935182323", "categories" : [ "Java" ] }
+]);
+    </pre>
+    <h2>Read</h2>
+    <ul>
+        <li>db.books.find() all record</li>
+        <li>db.books.findOne() return first record</li>
+        <li>db.books.find({_id: 10})</li>
+        <li>db.books.find({ categories: 'Java'}, { title: 1,isbn: 1})</li>
+        <li>db.books.find({ categories: 'Java'}, { title: 1,isbn: 1,_id: 0})</li>
+        <li>db.books.find({ categories: 'Java'}, { title: 0})</li>
+        <li></li>
+    </ul>
+    <ul>
+        <li> Using $eq operator to check if a field equals a specified value
+            <pre>
+                db.products.find({
+                    price: {
+                        $eq: 899
+                    }
+                }, {
+                    name: 1,
+                    price: 1
+                })
+
+                db.products.find({
+                    "spec.ram": {
+                        $eq: 4
+                    }
+                }, {
+                    name: 1,
+                    "spec.ram": 1
+                })
+
+                db.products.find({
+                    price: {
+                        $lt: 799
+                    }
+                }, {
+                    name: 1,
+                    price: 1
+                })
+
+                db.products.find({
+                    price: {
+                        $in: [699, 799]
+                    }
+                }, {
+                    name: 1,
+                    price: 1
+                })
+            </pre>
+        </li>
+    </ul>
+    <h2>Delete</h2>
+    <ul>
+        <li>db.books.deleteMany({})</li>
+    </ul>
+</body>
+
+</html>

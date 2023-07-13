@@ -1,8 +1,6 @@
 let http = require('http'), url = require("url")
 const Api = require('./API')
 
-
-
 http.createServer(function (req, res) {
     let urlParts = url.parse(req.url)
     switch (urlParts.pathname) {
