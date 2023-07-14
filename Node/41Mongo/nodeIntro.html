@@ -213,10 +213,81 @@
             </pre>
         </li>
     </ul>
+    <ul>
+        <li>Using MongoDB $size operator to select documents that have an array containing a number of elements
+            <pre>
+                db.products.find({
+                    color: {
+                        $size: 2
+                    }
+                }, {
+                    name: 1,
+                    color: 1
+                })
+            </pre>
+        </li>
+        <li>The $all is an array query operator that allows you to find the documents where the value of a field is an array that contains all the specified elements.
+
+            <pre>
+                db.products.find({
+                    color: {
+                        $all: ["black", "white"]
+                    }
+                }, {
+                    name: 1,
+                    color: 1
+                })
+                OR
+                db.products.find({
+                    $and: [
+                        {color: "black"},
+                        {color: "white"}
+                    ]
+                }, {
+                    name: 1,
+                    color: 1
+                })
+            </pre>
+        </li>
+        <li>
+            Using the MongDB $elemMatch opeator example
+            <pre>
+                db.products.find({
+                    storage: {
+                        $elemMatch: {
+                            $lt: 128
+                        }
+                    }
+                }, {
+                    name: 1,
+                    storage: 1
+                });
+            </pre>
+        </li>
+    </ul>
     <h2>Delete</h2>
     <ul>
         <li>db.books.deleteMany({})</li>
     </ul>
+
+
+    <h2>Aggregate</h2>
+    <pre>
+        db.sales.aggregate([
+	{ 
+		$match: { item: "Americanos" } 
+	},
+	{ 
+		$group: {
+			_id: "$size",
+			totalQty: {$sum: "$quantity"}
+		}
+	},
+	{
+		$sort: { totalQty : -1}		
+	}
+]);
+    </pre>
 </body>
 
 </html>
